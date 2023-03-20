@@ -1,6 +1,7 @@
 packetbeat:
   interfaces:
     device: en0
+#    device: any
 #    type: af_packet # linux
     internal_networks:
       - private
@@ -107,3 +108,8 @@ processors:
   - detect_mime_type:
       field: http.response.body.content
       target: http.response.mime_type
+  - drop_event:
+      when:
+        or:
+          - equals.url.path: "/external/exclude"
+          - equals.url.path: "/external/exclude2"
