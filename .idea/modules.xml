@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/packetbeat-mac.iml" filepath="$PROJECT_DIR$/.idea/packetbeat-mac.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/packetbeat.iml" filepath="$PROJECT_DIR$/.idea/packetbeat.iml" />
     </modules>
   </component>
 </project>
