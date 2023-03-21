@@ -29,7 +29,13 @@ packetbeat:
       enabled: false
 
     - type: http
+      enabled: true
       ports: [ 80, 8080, 8081 ]
+      include_body_for: ["text/html", "application/json"] # request, response 둘 다 포함
+      # include_request_body_for: [] only request body
+      # include_response_body_for: [] only response body
+      send_headers: [ "User-Agent"] # 보낼 헤더 목록
+      hide_keywords: ['password'] # 필터링 파라미터 목록
 
     - type: memcache
 #      ports: [ 11211 ]
